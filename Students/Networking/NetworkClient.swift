@@ -25,8 +25,8 @@ struct NetworkClient {
             }
             
             do {
-                let recipes = try JSONDecoder().decode([Student].self, from: data)
-                completion(recipes, nil)
+                let students = try JSONDecoder().decode([Student].self, from: data)
+                completion(students, nil)
             } catch {
                 completion(nil, error)
                 return
